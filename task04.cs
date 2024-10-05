@@ -17,6 +17,9 @@ namespace C__lab04
         const int MaxCount = 10;
         int count = 0;
 
+        int mistakes = 0;
+        int missed = 0;
+
         Graphics Graph;
         Font MyFont = new Font("Arial", 32);
         Random Rand = new Random();
@@ -42,7 +45,9 @@ namespace C__lab04
                 if (count == MaxCount)
                 {
                     int time = DateTime.Now.Subtract(start).Seconds;
-                    MessageBox.Show("Время выполнения = " + time.ToString() + " секунд"); Close();
+                    MessageBox.Show($"Время выполнения = {time.ToString()} секунд\n" +
+                        $"Количество ошибок = {mistakes}\n");
+                    Close();
                 }
                 else
                 {
@@ -52,7 +57,8 @@ namespace C__lab04
                     count++;
                 }
             }
-            else System.Media.SystemSounds.Hand.Play();
+            else 
+                ++mistakes;
         }
     }
 }
