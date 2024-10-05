@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.TrainerTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // TrainerTimer
+            // 
+            this.TrainerTimer.Tick += new System.EventHandler(this.TrainerTimer_Tick);
             // 
             // task04
             // 
@@ -43,5 +49,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer TrainerTimer;
     }
 }
