@@ -42,6 +42,8 @@
             this.Name = "task06Screensaver";
             this.Text = "task06Screensaver";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.task06Screensaver_FormClosing);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.task06Screensaver_KeyDown);
             this.ResumeLayout(false);
 
         }

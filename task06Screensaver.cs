@@ -27,5 +27,15 @@ namespace C__lab04
         {
             InitializeComponent();
         }
+
+        private void task06Screensaver_KeyDown(object sender, KeyEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void task06Screensaver_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MessageBox.Show("Закрыть приложение?", "", MessageBoxButtons.OKCancel);
+        }
     }
 }
