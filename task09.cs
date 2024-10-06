@@ -34,7 +34,6 @@ namespace C__lab04
         {
             dotNumber = 0;
 
-            pen.Width = 1;
             graphics = CreateGraphics();
             graphics.Clear(BackColor);
 
@@ -55,7 +54,6 @@ namespace C__lab04
             if (dotNumber == 0)
             {
                 ++dotNumber;
-                pen.Width = 1;
                 dot.X = e.X; dot.Y = e.Y;
                 graphics.DrawEllipse(pen, dot.X, dot.Y, pen.Width, pen.Width);
             }
@@ -71,6 +69,8 @@ namespace C__lab04
             try
             {
                 steps = int.Parse(StepsTextbox.Text);
+                if (steps <= 0)
+                    throw new ArgumentOutOfRangeException();
                 for (int i = 0; i < steps; ++i)
                 {
                     int dotPosition = random.Next(1, 4);
@@ -99,7 +99,7 @@ namespace C__lab04
             catch
             {
                 StepsTextbox.Text = "0";
-                MessageBox.Show("Неправильный ввод");
+                MessageBox.Show("Некорректный ввод");
             }
         }
     }
