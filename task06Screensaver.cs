@@ -12,6 +12,17 @@ namespace C__lab04
 {
     public partial class task06Screensaver : Form
     {
+        public bool hasRectangles = false;
+        public bool hasEllipses = false;
+
+        public int figureNumber = 1;
+
+        public int interval = 5000;
+
+        Graphics graphics;
+        Pen pen = new Pen(Color.Black);
+        SolidBrush brush = new SolidBrush(Color.Black);
+
         public task06Screensaver()
         {
             InitializeComponent();
