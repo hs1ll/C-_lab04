@@ -49,8 +49,8 @@ namespace C__lab04
 
         private void figureRandomize(ref uint x, ref uint y, ref uint width, ref uint height)
         {
-            width = (uint)random.Next(ClientSize.Width);
-            height = (uint)random.Next(ClientSize.Height);
+            width = (uint)random.Next(ClientSize.Width / 3);
+            height = (uint)random.Next(ClientSize.Height / 3);
 
             x = (uint)random.Next(ClientSize.Width - (int)width - (int)pen.Width * 2);
             y = (uint)random.Next(ClientSize.Height - (int)height - (int)pen.Width * 2);
@@ -74,6 +74,8 @@ namespace C__lab04
             for (int i = 0; i < figureNumber; ++i)
             {
                 figureRandomize(ref x, ref y, ref width, ref height);
+                width /= (uint)i + 1;
+                height /= (uint)i + 1;
 
                 if (hasRectangles && hasEllipses)
                 {
