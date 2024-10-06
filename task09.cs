@@ -12,6 +12,7 @@ namespace C__lab04
 {
     public partial class task09 : Form
     {
+        int dotNumber = 0;
         int gap = 50;
 
         Point a = new Point(0, 0);
@@ -29,6 +30,7 @@ namespace C__lab04
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
+            pen.Width = 1;
             graphics = CreateGraphics();
             graphics.Clear(BackColor);
 
@@ -42,6 +44,21 @@ namespace C__lab04
             c.Y = random.Next(ClientSize.Height - gap * 5, ClientSize.Height - gap * 4);
 
             graphics.DrawPolygon(pen, new Point[3] { a, b, c });
+        }
+
+        private void task09_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (dotNumber == 0)
+            {
+                ++dotNumber;
+                pen.Width = 3;
+                graphics.DrawEllipse(pen, e.X, e.Y, pen.Width, pen.Width);
+            }
+        }
+
+        private void task09_Shown(object sender, EventArgs e)
+        {
+            ResetButton.PerformClick();
         }
     }
 }

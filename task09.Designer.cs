@@ -82,6 +82,8 @@
             this.Controls.Add(this.ResetButton);
             this.Name = "task09";
             this.Text = "Task09";
+            this.Shown += new System.EventHandler(this.task09_Shown);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.task09_MouseClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 
