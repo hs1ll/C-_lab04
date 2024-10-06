@@ -52,6 +52,7 @@
             this.ExecuteButton.TabIndex = 1;
             this.ExecuteButton.Text = "Начать";
             this.ExecuteButton.UseVisualStyleBackColor = true;
+            this.ExecuteButton.Click += new System.EventHandler(this.ExecuteButton_Click);
             // 
             // StepsTextbox
             // 

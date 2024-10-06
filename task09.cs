@@ -18,6 +18,8 @@ namespace C__lab04
         Point a = new Point(0, 0);
         Point b = new Point(0, 0);
         Point c = new Point(0, 0);
+        Point dot = new Point(0, 0);
+        int steps = 0;
 
         Random random = new Random();
         Graphics graphics;
@@ -30,6 +32,8 @@ namespace C__lab04
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
+            dotNumber = 0;
+
             pen.Width = 1;
             graphics = CreateGraphics();
             graphics.Clear(BackColor);
@@ -51,14 +55,52 @@ namespace C__lab04
             if (dotNumber == 0)
             {
                 ++dotNumber;
-                pen.Width = 3;
-                graphics.DrawEllipse(pen, e.X, e.Y, pen.Width, pen.Width);
+                pen.Width = 1;
+                dot.X = e.X; dot.Y = e.Y;
+                graphics.DrawEllipse(pen, dot.X, dot.Y, pen.Width, pen.Width);
             }
         }
 
         private void task09_Shown(object sender, EventArgs e)
         {
             ResetButton.PerformClick();
+        }
+
+        private void ExecuteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                steps = int.Parse(StepsTextbox.Text);
+                for (int i = 0; i < steps; ++i)
+                {
+                    int dotPosition = random.Next(1, 4);
+                    switch (dotPosition)
+                    {
+                        case 1:
+                            {
+                                dot.X = (dot.X + a.X) / 2; dot.Y = (dot.Y + a.Y) / 2;
+                                break;
+                            }
+                        case 2:
+                            {
+                                dot.X = (dot.X + b.X) / 2; dot.Y = (dot.Y + b.Y) / 2;
+                                break;
+                            }
+                        case 3:
+                            {
+                                dot.X = (dot.X + c.X) / 2; dot.Y = (dot.Y + c.Y) / 2;
+                                break;
+                            }
+                        default: break;
+                    }
+                    graphics.DrawEllipse(pen, dot.X, dot.Y, pen.Width, pen.Width);
+                }
+            }
+            catch
+            {
+                StepsTextbox.Text = "0";
+                MessageBox.Show("Неправильный ввод");
+            }
         }
     }
 }
