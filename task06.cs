@@ -54,18 +54,21 @@ namespace C__lab04
                 foreach (RadioButton rb in FigureCountBox.Controls)
                 {
                     if (rb.Checked)
+                    {
                         screensaver.figureNumber = (int)rb.Tag;
-
-                    break;
+                        break;
+                    }
                 }
 
                 foreach (RadioButton rb in IntervalGroup.Controls)
                 {
                     if (rb.Checked)
+                    {
                         screensaver.interval = (int)rb.Tag;
-                    break;
+                        break;
+                    }
                 }
-                
+
                 screensaver.Show();
             }
             catch (Exception ex)

@@ -32,6 +32,10 @@
             this.ScreensaverTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
+            // ScreensaverTimer
+            // 
+            this.ScreensaverTimer.Tick += new System.EventHandler(this.ScreensaverTimer_Tick);
+            // 
             // task06Screensaver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -43,6 +47,7 @@
             this.Text = "task06Screensaver";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.task06Screensaver_FormClosing);
+            this.Shown += new System.EventHandler(this.task06Screensaver_Shown);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.task06Screensaver_KeyDown);
             this.ResumeLayout(false);
 
