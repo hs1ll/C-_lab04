@@ -16,5 +16,12 @@ namespace C__lab04
         {
             InitializeComponent();
         }
+
+        private void task06_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            task06Screensaver screensaver = new task06Screensaver();
+
+            screensaver.Show();
+        }
     }
 }

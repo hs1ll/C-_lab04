@@ -180,6 +180,7 @@
             this.Controls.Add(this.FigureBox);
             this.Name = "task06";
             this.Text = "task06";
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.task06_MouseDoubleClick);
             this.FigureBox.ResumeLayout(false);
             this.FigureBox.PerformLayout();
             this.FigureCountBox.ResumeLayout(false);

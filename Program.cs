@@ -16,7 +16,7 @@ namespace C__lab04
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new task06Screensaver());
+            Application.Run(new task06());
         }
     }
 }
