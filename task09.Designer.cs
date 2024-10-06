@@ -42,6 +42,7 @@
             this.ResetButton.TabIndex = 0;
             this.ResetButton.Text = "Изобразить новый треугольник";
             this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // ExecuteButton
             // 
