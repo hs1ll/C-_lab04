@@ -1,29 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
+using Task06Settings;
 
 namespace C__lab04
 {
     public partial class task06 : Form
     {
-        enum FIGURES
-        {
-            Rectangle,
-            Ellipse,
-        }
-
-        enum FIGURE_NUMBER
-        {
-            Single = 1,
-            Pair = 2,
-        }
-
-        enum INTERVALS
-        {
-            Slow = 3000,
-            Medium = 1000,
-            Fast = 100,
-        }
-
         public task06()
         {
             InitializeComponent();

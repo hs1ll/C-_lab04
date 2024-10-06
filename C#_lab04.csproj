@@ -90,6 +90,7 @@
     <Compile Include="task06Screensaver.Designer.cs">
       <DependentUpon>task06Screensaver.cs</DependentUpon>
     </Compile>
+    <Compile Include="Task06Settings.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
