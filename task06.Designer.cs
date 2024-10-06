@@ -58,6 +58,8 @@
             // RecCheckbox
             // 
             this.RecCheckbox.AutoSize = true;
+            this.RecCheckbox.Checked = true;
+            this.RecCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.RecCheckbox.Location = new System.Drawing.Point(7, 20);
             this.RecCheckbox.Name = "RecCheckbox";
             this.RecCheckbox.Size = new System.Drawing.Size(106, 17);
@@ -91,6 +93,7 @@
             // SingleFigureRadiobutton
             // 
             this.SingleFigureRadiobutton.AutoSize = true;
+            this.SingleFigureRadiobutton.Checked = true;
             this.SingleFigureRadiobutton.Location = new System.Drawing.Point(7, 20);
             this.SingleFigureRadiobutton.Name = "SingleFigureRadiobutton";
             this.SingleFigureRadiobutton.Size = new System.Drawing.Size(51, 17);
@@ -139,6 +142,7 @@
             // SlowSpeedRadiobutton
             // 
             this.SlowSpeedRadiobutton.AutoSize = true;
+            this.SlowSpeedRadiobutton.Checked = true;
             this.SlowSpeedRadiobutton.Location = new System.Drawing.Point(7, 20);
             this.SlowSpeedRadiobutton.Name = "SlowSpeedRadiobutton";
             this.SlowSpeedRadiobutton.Size = new System.Drawing.Size(76, 17);
